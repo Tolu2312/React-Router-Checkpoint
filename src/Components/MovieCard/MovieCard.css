@@ -1,0 +1,8 @@
+.moviecard{
+    background-color:darkcyan;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 25%;
+    /* color:#fff; */
+}

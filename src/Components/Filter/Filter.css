@@ -1,0 +1,14 @@
+.input1,
+.input2{
+    height: 45px;
+    width: 280px;
+    margin: 20px;
+    padding-left: 10px;
+    border-radius: 20px;
+    background-color: bisque;
+    border: none;
+}
+.filter{
+    text-align: center;
+    color:#000;
+}
