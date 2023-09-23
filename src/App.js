@@ -3,7 +3,9 @@ import React, { useState } from 'react'
 import './App.css'
 import MovieList from './Components/MovieList/MovieList'
 import Filter from './Components/Filter/Filter'
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+
+//import { Routes, Route, Router } from 'react-router-dom'
 import HomePage from './Components/HomePage/HomePage'
 import MovieDetail from './Components/MovieDetail/MovieDetail'
 import MovieCard from './Components/MovieCard/MovieCard';
@@ -76,11 +78,14 @@ function App() {
   return (
     
     <div className="App">
-      <h1 style={{textAlign:'center'}}>Movie App</h1>
-      <Routes>
+      <h1 style={{textAlign:'center'}}>Movie App</h1>    
+      <Router >
+        <Routes>
           <Route path="/" element={<HomePage movies={filteredMovies} />}></Route>
           <Route path="/movie/:title" element={<MovieDetail movies={movies} />}></Route>
-      </Routes>
+        </Routes>
+      </Router>
+      
 
       <Filter onTitleChange={filterByTitle} onRatingChange={filterByRating} />
       <MovieList movies={filteredMovies} />
